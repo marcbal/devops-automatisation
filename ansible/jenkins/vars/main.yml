@@ -1,0 +1,5 @@
+---
+# vars file for jenkins
+jenkins:
+  repo_key_URL: https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+  repo_URL: https://pkg.jenkins.io/debian-stable

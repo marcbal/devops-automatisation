@@ -1,0 +1,26 @@
+---
+# tasks file for jenkins
+- name: Install Jenkins apt repo key
+  ansible.builtin.apt_key:
+    url: "{{ jenkins.repo_key_URL }}"
+    state: present
+
+- name: Install Jenkins apt repo
+  ansible.builtin.apt_repository:
+    repo: "deb {{ jenkins.repo_URL }} binary/"
+    state: present
+
+- name: Update apt cache
+  ansible.builtin.apt:
+    update_cache: true
+
+- name: Install Jenkins
+  ansible.builtin.apt:
+    name: jenkins
+    state: present
+
+- name: Start Jenkins
+  ansible.builtin.service:
+    name: jenkins
+    enabled: true
+    state: started

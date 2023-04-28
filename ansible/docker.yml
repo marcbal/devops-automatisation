@@ -1,0 +1,7 @@
+---
+- name: Docker install
+  hosts: deploy
+  become: true
+  roles:
+    - java
+    - docker
