@@ -1,0 +1,3 @@
+[submodule "node-project"]
+	path = node-project
+	url = https://github.com/marue59/Jenkins-Ansible-Terraform.git
